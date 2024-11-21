@@ -28,10 +28,6 @@ public class UserServiceImp implements UserService {
       return userDao.listUsers();
    }
 
-   @Override
-   public List<Car> cars() {
-      return userDao.getcars();
-   }
 
    @Override
    public User findCarBySeriesAndModel(int series, String model) {
@@ -45,9 +41,6 @@ public class UserServiceImp implements UserService {
    }
 
 
-   @Transactional
-   public void saveCarList(List<Car> carList) {
-     userDao.saveCarList(carList);
-   }
+
 
 }

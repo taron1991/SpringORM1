@@ -51,20 +51,6 @@ public class UserDaoImp implements UserDao {
         }
     }
 
-    @Override
-    public void saveCarList(List<Car> carList) {
-        Session session = sessionFactory.getCurrentSession();
-
-        for (Car car:carList){
-            session.save(car);
-        }
-    }
-
-    @Override
-    public List<Car> getcars() {
-        TypedQuery<Car> query = sessionFactory.getCurrentSession().createQuery("from Car");
-        return query.getResultList();
-    }
 
 
 }
